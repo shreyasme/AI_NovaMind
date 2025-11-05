@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { MyContext } from "./MyContext.jsx";
 import {v1 as uuidv1} from "uuid";
 import ConfirmDialog from "./ConfirmDialog.jsx";
+import config from "./config.js";
 
 function Sidebar() {
     const {allThreads, setAllThreads, currThreadId, setNewChat, setPrompt, setReply, setCurrThreadId, setPrevChats, user} = useContext(MyContext);
@@ -13,7 +14,7 @@ function Sidebar() {
         
         try {
             const userId = user.email || user.guestId || 'anonymous';
-            const response = await fetch(`http://localhost:5000/api/thread?userId=${encodeURIComponent(userId)}`);
+            const response = await fetch(`${config.API_URL}/api/thread?userId=${encodeURIComponent(userId)}`);
             const res = await response.json();
             const filteredData = res.map(thread => ({threadId: thread.threadId, title: thread.title}));
             setAllThreads(filteredData);
@@ -45,7 +46,7 @@ function Sidebar() {
 
         try {
             const userId = user.email || user.guestId || 'anonymous';
-            const response = await fetch(`http://localhost:5000/api/thread/${newThreadId}?userId=${encodeURIComponent(userId)}`);
+            const response = await fetch(`${config.API_URL}/api/thread/${newThreadId}?userId=${encodeURIComponent(userId)}`);
             const res = await response.json();
             setPrevChats(res);
             setNewChat(false);
@@ -64,7 +65,7 @@ function Sidebar() {
         
         try {
             const userId = user.email || user.guestId || 'anonymous';
-            const response = await fetch(`http://localhost:5000/api/thread/${threadId}?userId=${encodeURIComponent(userId)}`, {
+            const response = await fetch(`${config.API_URL}/api/thread/${threadId}?userId=${encodeURIComponent(userId)}`, {
                 method: "DELETE"
             });
 

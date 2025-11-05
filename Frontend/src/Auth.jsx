@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Auth.css';
+import config from './config.js';
 
 function Auth({ onLogin }) {
     const [isLogin, setIsLogin] = useState(true);
@@ -40,7 +41,7 @@ function Auth({ onLogin }) {
         try {
             if (isLogin) {
                 // Login API call
-                const response = await fetch('http://localhost:5000/api/auth/login', {
+                const response = await fetch(`${config.API_URL}/api/auth/login`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -61,7 +62,7 @@ function Auth({ onLogin }) {
                 }
             } else {
                 // Register API call
-                const response = await fetch('http://localhost:5000/api/auth/register', {
+                const response = await fetch(`${config.API_URL}/api/auth/register`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

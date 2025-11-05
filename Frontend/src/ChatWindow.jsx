@@ -3,6 +3,7 @@ import Chat from "./Chat.jsx";
 import { MyContext } from "./MyContext.jsx";
 import { useContext, useState, useEffect, useRef } from "react";
 import {ScaleLoader} from "react-spinners";
+import config from "./config.js";
 
 function ChatWindow() {
     const {prompt, setPrompt, reply, setReply, currThreadId, setPrevChats, setNewChat, user, handleLogout} = useContext(MyContext);
@@ -92,7 +93,7 @@ function ChatWindow() {
                 
                 console.log("📦 FormData prepared");
 
-                const response = await fetch("http://localhost:5000/api/analyze-image", {
+                const response = await fetch(`${config.API_URL}/api/analyze-image`, {
                     method: "POST",
                     body: formData
                 });
@@ -129,7 +130,7 @@ function ChatWindow() {
                     })
                 };
 
-                const response = await fetch("http://localhost:5000/api/chat", options);
+                const response = await fetch(`${config.API_URL}/api/chat`, options);
                 const res = await response.json();
                 console.log(res);
                 setReply(res.reply);
