@@ -432,3 +432,193 @@ input:focus {
     transform: scale(1.1);
 }
 
+/* ============================================
+   RESPONSIVE DESIGN FOR CHAT WINDOW
+   ============================================ */
+
+/* Mobile devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    .chatWindow {
+        height: 60vh;
+    }
+    
+    .navbar {
+        padding: 12px 16px;
+    }
+    
+    .navbar .logo {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .navbar h1, .brand-name {
+        font-size: 18px;
+    }
+    
+    .navbar-logo {
+        height: 32px;
+        width: 32px;
+    }
+    
+    .userIcon {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+    
+    .userIconDiv {
+        margin: 0.5rem 1rem;
+    }
+    
+    .navbar span {
+        margin: 0.5rem 1rem;
+    }
+    
+    .dropDown {
+        top: 3.5rem;
+        right: 1rem;
+        width: 160px;
+    }
+    
+    .chatBottom {
+        padding: 12px;
+        gap: 10px;
+    }
+    
+    .inputBox {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    input {
+        padding: 14px 50px 14px 50px;
+        font-size: 14px;
+        border-radius: 20px;
+    }
+    
+    #submit {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        right: 6px;
+        font-size: 16px;
+    }
+    
+    .imageUploadBtn,
+    .voiceInputBtn {
+        font-size: 1.1rem;
+        padding: 0.4rem;
+        position: absolute;
+        left: 6px;
+    }
+    
+    .voiceInputBtn {
+        left: 40px;
+    }
+    
+    .imagePreviewContainer {
+        max-width: 100%;
+        max-height: 150px;
+        padding: 8px;
+    }
+    
+    .imagePreview {
+        max-width: 120px;
+        max-height: 120px;
+    }
+    
+    .imagePreview img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .info {
+        font-size: 0.7rem;
+        padding: 0.4rem;
+    }
+}
+
+/* Small devices (landscape phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .chatWindow {
+        height: 65vh;
+    }
+    
+    .navbar h1, .brand-name {
+        font-size: 20px;
+    }
+    
+    .chatBottom {
+        padding: 14px;
+    }
+    
+    input {
+        padding: 16px 52px 16px 70px;
+        font-size: 15px;
+    }
+    
+    #submit {
+        height: 44px;
+        width: 44px;
+    }
+    
+    .imageUploadBtn,
+    .voiceInputBtn {
+        position: absolute;
+    }
+    
+    .imageUploadBtn {
+        left: 8px;
+    }
+    
+    .voiceInputBtn {
+        left: 46px;
+    }
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar {
+        padding: 16px 24px;
+    }
+    
+    .chatBottom {
+        padding: 16px 24px;
+    }
+    
+    input {
+        padding: 17px 58px 17px 80px;
+        font-size: 15px;
+    }
+    
+    .imageUploadBtn {
+        position: absolute;
+        left: 10px;
+    }
+    
+    .voiceInputBtn {
+        position: absolute;
+        left: 50px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .chatWindow {
+        height: 100vh;
+    }
+    
+    .imageUploadBtn {
+        position: absolute;
+        left: 10px;
+    }
+    
+    .voiceInputBtn {
+        position: absolute;
+        left: 50px;
+    }
+    
+    input {
+        padding: 18px 60px 18px 90px;
+    }
+}

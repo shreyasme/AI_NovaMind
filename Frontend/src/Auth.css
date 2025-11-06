@@ -286,3 +286,115 @@
     color: var(--accent-color);
     font-size: 18px;
 }
+
+/* ============================================
+   RESPONSIVE DESIGN FOR AUTH PAGE
+   ============================================ */
+
+/* Mobile devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    .auth-container {
+        padding: 16px;
+    }
+    
+    .auth-card {
+        padding: 24px 20px;
+        max-width: 100%;
+        border-radius: 20px;
+    }
+    
+    .auth-logo {
+        height: 60px;
+        width: 60px;
+        margin-bottom: 12px;
+    }
+    
+    .auth-title {
+        font-size: 24px;
+    }
+    
+    .auth-subtitle {
+        font-size: 14px;
+    }
+    
+    .form-group label {
+        font-size: 13px;
+    }
+    
+    .auth-input {
+        padding: 12px 16px;
+        font-size: 14px;
+        border-radius: 12px;
+    }
+    
+    .auth-button,
+    .guest-button {
+        padding: 12px 18px;
+        font-size: 14px;
+        border-radius: 12px;
+    }
+    
+    .auth-error,
+    .auth-success {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+    
+    .auth-switch {
+        font-size: 13px;
+        margin-top: 20px;
+    }
+    
+    .divider {
+        font-size: 13px;
+        margin: 16px 0;
+    }
+    
+    .divider span {
+        padding: 0 16px;
+    }
+}
+
+/* Small devices (landscape phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .auth-container {
+        padding: 18px;
+    }
+    
+    .auth-card {
+        padding: 28px 24px;
+        max-width: 400px;
+    }
+    
+    .auth-logo {
+        height: 70px;
+        width: 70px;
+    }
+    
+    .auth-title {
+        font-size: 28px;
+    }
+    
+    .auth-subtitle {
+        font-size: 15px;
+    }
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .auth-card {
+        max-width: 420px;
+        padding: 30px 26px;
+    }
+    
+    .auth-title {
+        font-size: 30px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .auth-card {
+        max-width: 380px;
+    }
+}
