@@ -86,6 +86,23 @@
 
 /* navbar */
 
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.hamburger-menu:hover {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--accent-color);
+}
+
 .navbar {
     width: 100%;
     display: flex;
@@ -436,10 +453,17 @@ input:focus {
    RESPONSIVE DESIGN FOR CHAT WINDOW
    ============================================ */
 
-/* Mobile devices (portrait phones, less than 576px) */
-@media (max-width: 575px) {
+/* Mobile devices (portrait and landscape phones, less than 768px) */
+@media (max-width: 767px) {
     .chatWindow {
-        height: 60vh;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .hamburger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .navbar {
@@ -467,11 +491,11 @@ input:focus {
     }
     
     .userIconDiv {
-        margin: 0.5rem 1rem;
+        margin: 0.5rem 0;
     }
     
     .navbar span {
-        margin: 0.5rem 1rem;
+        margin: 0.5rem 0;
     }
     
     .dropDown {
@@ -535,44 +559,6 @@ input:focus {
     .info {
         font-size: 0.7rem;
         padding: 0.4rem;
-    }
-}
-
-/* Small devices (landscape phones, 576px to 767px) */
-@media (min-width: 576px) and (max-width: 767px) {
-    .chatWindow {
-        height: 65vh;
-    }
-    
-    .navbar h1, .brand-name {
-        font-size: 20px;
-    }
-    
-    .chatBottom {
-        padding: 14px;
-    }
-    
-    input {
-        padding: 16px 52px 16px 70px;
-        font-size: 15px;
-    }
-    
-    #submit {
-        height: 44px;
-        width: 44px;
-    }
-    
-    .imageUploadBtn,
-    .voiceInputBtn {
-        position: absolute;
-    }
-    
-    .imageUploadBtn {
-        left: 8px;
-    }
-    
-    .voiceInputBtn {
-        left: 46px;
     }
 }
 

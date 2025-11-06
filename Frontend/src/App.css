@@ -59,21 +59,14 @@ body {
    RESPONSIVE DESIGN - MOBILE FIRST
    ============================================ */
 
-/* Mobile devices (portrait phones, less than 576px) */
-@media (max-width: 575px) {
+/* Mobile devices (less than 768px) - sidebar as overlay */
+@media (max-width: 767px) {
   .app {
-    flex-direction: column;
+    flex-direction: row;
   }
   
   body {
     font-size: 14px;
-  }
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767px) {
-  .app {
-    flex-direction: column;
   }
 }
 

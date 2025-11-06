@@ -6,7 +6,7 @@ import {ScaleLoader} from "react-spinners";
 import config from "./config.js";
 
 function ChatWindow() {
-    const {prompt, setPrompt, reply, setReply, currThreadId, setPrevChats, setNewChat, user, handleLogout} = useContext(MyContext);
+    const {prompt, setPrompt, reply, setReply, currThreadId, setPrevChats, setNewChat, user, handleLogout, isSidebarOpen, setIsSidebarOpen} = useContext(MyContext);
     const [loading, setLoading] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [navbarVisible, setNavbarVisible] = useState(true);
@@ -291,6 +291,9 @@ function ChatWindow() {
     return (
         <div className="chatWindow">
             <div className={`navbar ${navbarVisible ? 'navbar-visible' : 'navbar-hidden'}`}>
+                <button className="hamburger-menu" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+                    <i className="fa-solid fa-ellipsis-vertical"></i>
+                </button>
                 <div className="brand-name">
                     <img src="/novamind-logo.png" alt="NovaMind" className="logo" />
                     NovaMind

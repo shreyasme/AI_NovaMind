@@ -194,64 +194,66 @@ button:hover {
    RESPONSIVE DESIGN FOR SIDEBAR
    ============================================ */
 
-/* Mobile devices (portrait phones, less than 576px) */
-@media (max-width: 575px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        max-height: 40vh;
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        position: relative;
-        z-index: 100;
-    }
-    
-    .new-chat-button {
-        padding: 12px 16px;
-        font-size: 14px;
-    }
-    
-    .new-chat-button .logo {
-        width: 28px;
-        height: 28px;
-    }
-    
-    .sidebar-content {
-        max-height: 20vh;
-        overflow-y: auto;
-    }
-    
-    .history li {
-        padding: 10px 12px;
-        font-size: 13px;
-    }
-    
-    .sign {
-        padding: 10px;
-        font-size: 10px;
-    }
-    
-    .sign .developer-credit {
-        font-size: 9px;
-    }
+/* Sidebar overlay for mobile */
+.sidebar-overlay {
+    display: none;
 }
 
-/* Small devices (landscape phones, 576px to 767px) */
-@media (min-width: 576px) and (max-width: 767px) {
+/* Mobile devices (portrait phones, less than 768px) */
+@media (max-width: 767px) {
     .sidebar {
-        width: 100%;
-        height: auto;
-        max-height: 35vh;
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 280px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    .sidebar-content {
-        max-height: 25vh;
+    .sidebar-open {
+        left: 0;
+    }
+    
+    .sidebar-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        backdrop-filter: blur(4px);
     }
     
     .new-chat-button {
         padding: 14px 18px;
+        font-size: 15px;
+    }
+    
+    .new-chat-button .logo {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .sidebar-content {
+        height: calc(100vh - 200px);
+    }
+    
+    .history li {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+    
+    .sign {
+        padding: 12px;
+        font-size: 11px;
+    }
+    
+    .sign .developer-credit {
+        font-size: 9px;
     }
 }
 

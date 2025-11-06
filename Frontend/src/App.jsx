@@ -14,6 +14,7 @@ function App() {
   const [prevChats, setPrevChats] = useState([]); //stores all chats of curr threads
   const [newChat, setNewChat] = useState(true);
   const [allThreads, setAllThreads] = useState([]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Check if user is already logged in
   useEffect(() => {
@@ -65,7 +66,9 @@ function App() {
     prevChats, setPrevChats,
     allThreads, setAllThreads,
     user, 
-    handleLogout
+    handleLogout,
+    isSidebarOpen, 
+    setIsSidebarOpen
   }; 
 
   // Show auth screen if not logged in
