@@ -125,6 +125,7 @@ function Sidebar() {
  
             <div className="sign">
                 <p>NovaMind AI &copy; 2025</p>
+                <p className="developer-credit">Developed by shreyas.me</p>
             </div>
 
             <ConfirmDialog
