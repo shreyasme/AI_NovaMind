@@ -292,7 +292,7 @@ function ChatWindow() {
         <div className="chatWindow">
             <div className={`navbar ${navbarVisible ? 'navbar-visible' : 'navbar-hidden'}`}>
                 <button className="hamburger-menu" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-                    <i className="fa-solid fa-ellipsis-vertical"></i>
+                    <i className="fa-solid fa-bars"></i>
                 </button>
                 <div className="brand-name">
                     <img src="/novamind-logo.png" alt="NovaMind" className="logo" />

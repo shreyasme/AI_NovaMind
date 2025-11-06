@@ -27,35 +27,35 @@ function App() {
   }, []);
 
   const handleLogin = (userData) => {
-    // Force clear any existing user data first
-    localStorage.removeItem('novamind_user');
-    localStorage.setItem('novamind_logged_in', 'false');
-    
     // Set new user data
     setUser(userData);
     localStorage.setItem('novamind_logged_in', 'true');
     localStorage.setItem('novamind_user', JSON.stringify(userData));
     
-    // Clear previous user's data completely
+    // Reset to fresh state for new user
     setPrevChats([]);
     setAllThreads([]);
     setCurrThreadId(uuidv1());
     setNewChat(true);
     setPrompt("");
     setReply(null);
+    setIsSidebarOpen(false);
   };
 
   const handleLogout = () => {
+    // Clear all user data
     setUser(null);
-    localStorage.setItem('novamind_logged_in', 'false');
+    localStorage.removeItem('novamind_logged_in');
     localStorage.removeItem('novamind_user');
-    // Clear chat data on logout
+    
+    // Clear all chat data
     setPrevChats([]);
     setAllThreads([]);
     setCurrThreadId(uuidv1());
     setNewChat(true);
     setPrompt("");
     setReply(null);
+    setIsSidebarOpen(false);
   };
 
   const providerValues = {

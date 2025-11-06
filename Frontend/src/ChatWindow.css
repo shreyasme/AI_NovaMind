@@ -88,19 +88,26 @@
 
 .hamburger-menu {
     display: none;
-    background: none;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
     border: none;
-    color: var(--text-primary);
-    font-size: 24px;
+    color: white;
+    font-size: 20px;
     cursor: pointer;
-    padding: 8px;
+    padding: 10px 14px;
     transition: all 0.3s ease;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    align-items: center;
+    justify-content: center;
 }
 
 .hamburger-menu:hover {
-    background-color: rgba(99, 102, 241, 0.1);
-    color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+}
+
+.hamburger-menu:active {
+    transform: translateY(0);
 }
 
 .navbar {
