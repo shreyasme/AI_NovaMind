@@ -368,6 +368,9 @@ function ChatWindow() {
                 <p className="info">
                     NovaMind can make mistakes. Consider checking important information.
                 </p>
+                <p className="developer">
+                    Developed by Shreyas
+                </p>
             </div>
         </div>
     )

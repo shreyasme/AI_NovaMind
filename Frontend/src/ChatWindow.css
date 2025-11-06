@@ -259,6 +259,23 @@ input:focus {
     color: #b4b4b4;
 }
 
+.developer {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.5rem;
+    color: #888;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 1rem;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.developer:hover {
+    opacity: 1;
+    color: var(--accent-color);
+}
+
 /* dropdown css */
 
 .dropDown {
