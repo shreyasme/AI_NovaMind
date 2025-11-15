@@ -12,7 +12,7 @@ const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 // CORS configuration for production
 const corsOptions = {
-    origin: process.env.FRONTEND_URL || '*',
+    origin: process.env.FRONTEND_URL ? process.env.FRONTEND_URL.trim() : '*',
     credentials: true,
     optionsSuccessStatus: 200
 };
