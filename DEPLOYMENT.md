@@ -45,10 +45,10 @@ git push origin main
 - **Name:** `novamind-backend` (or any name you like)
 - **Region:** Choose closest region (e.g., Oregon)
 - **Branch:** `main`
-- **Root Directory:** Leave blank
+- **Root Directory:** `Backend`
 - **Runtime:** `Node`
-- **Build Command:** `cd Backend && npm install`
-- **Start Command:** `cd Backend && npm start`
+- **Build Command:** `npm install`
+- **Start Command:** `npm start`
 
 **Advanced Settings:**
 - **Plan:** Free
@@ -96,9 +96,9 @@ You should see: `{"message": "Server is working!"}`
 **Basic Settings:**
 - **Name:** `novamind-frontend` (or any name)
 - **Branch:** `main`
-- **Root Directory:** Leave blank
-- **Build Command:** `cd Frontend && npm install && npm run build`
-- **Publish Directory:** `Frontend/dist`
+- **Root Directory:** `Frontend`
+- **Build Command:** `npm install && npm run build`
+- **Publish Directory:** `dist`
 
 **Advanced Settings:**
 - **Plan:** Free
@@ -149,6 +149,12 @@ Now we need to tell the backend to allow requests from the frontend.
 ## Troubleshooting
 
 ### Backend Issues
+
+**"No such file or directory" or "ENOENT: package.json" error:**
+- Make sure **Root Directory** is set to `Backend` (case-sensitive!)
+- Build Command should be: `npm install`
+- Start Command should be: `npm start`
+- Don't use `cd Backend` in commands when Root Directory is set
 
 **"Service Unavailable" or 503 error:**
 - Render free tier services sleep after 15 minutes
