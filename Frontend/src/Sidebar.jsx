@@ -24,8 +24,10 @@ function Sidebar() {
     };
 
     useEffect(() => {
-        getAllThreads();
-    }, [currThreadId, user]) // Add user dependency to reload threads when user changes
+        if (user) {
+            getAllThreads();
+        }
+    }, [currThreadId, user]) // Reload threads when user changes or new thread is created
 
 
     const createNewChat = () => {

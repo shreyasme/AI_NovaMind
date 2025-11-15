@@ -23,6 +23,12 @@ function App() {
     if (storedUser && isLoggedIn === 'true') {
       const userData = JSON.parse(storedUser);
       setUser(userData);
+      // Reset to a fresh chat state on page load
+      setCurrThreadId(uuidv1());
+      setNewChat(true);
+      setPrevChats([]);
+      setPrompt("");
+      setReply(null);
     }
   }, []);
 
