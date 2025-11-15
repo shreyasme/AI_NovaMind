@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './Auth.css';
 import config from './config.js';
 
@@ -12,13 +12,6 @@ function Auth({ onLogin }) {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
     const [loading, setLoading] = useState(false);
-
-    // Ensure clean state when Auth component mounts
-    useEffect(() => {
-        // Clear any residual authentication data
-        localStorage.removeItem('novamind_logged_in');
-        localStorage.removeItem('novamind_user');
-    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
